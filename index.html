@@ -1,360 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BillOne Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for BillOne, a business management app for sales, purchases, invoices, inventory, customers and business reports.">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillOne Privacy Policy</title>
+<meta name="description" content="Privacy Policy for BillOne (Offline-first GST invoicing and inventory), published by Sagar Singh (developer &ldquo;Myx&rdquo;).">
+<style>
+  :root {
+    --accent: #7c3aed;
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #16181d;
+    --muted: #5f6572;
+    --border: #e4e6eb;
+    --glance: color-mix(in srgb, var(--accent) 8%, var(--card));
+  }
+  @media (prefers-color-scheme: dark) {
     :root {
-      --purple: #7c3aed;
-      --purple-dark: #6d28d9;
-      --text: #17171c;
-      --muted: #6f7180;
-      --bg: #f7f7fa;
-      --card: #ffffff;
-      --border: #e8e8ee;
+      --accent: #a78bfa;
+      --bg: #0f1115;
+      --card: #171a20;
+      --text: #e8eaee;
+      --muted: #9aa1ad;
+      --border: #272b33;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-    .hero {
-      background: linear-gradient(135deg, #6d28d9, #8b5cf6);
-      color: white;
-      padding: 64px 20px 56px;
-    }
-    .hero-inner, main {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .brand {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 28px;
-    }
-    h1 {
-      font-size: clamp(34px, 6vw, 52px);
-      line-height: 1.08;
-      margin: 0 0 14px;
-      letter-spacing: -1.5px;
-    }
-    .hero p {
-      margin: 0;
-      font-size: 17px;
-      opacity: .92;
-    }
-    main {
-      padding: 34px 20px 70px;
-    }
-    .updated {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 28px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      margin-bottom: 18px;
-      box-shadow: 0 5px 24px rgba(20, 20, 30, .04);
-    }
-    h2 {
-      font-size: 24px;
-      margin: 0 0 12px;
-      letter-spacing: -.5px;
-    }
-    h3 {
-      font-size: 18px;
-      margin: 22px 0 7px;
-    }
-    p { margin: 9px 0; }
-    ul { margin: 9px 0 9px 22px; padding: 0; }
-    li { margin: 5px 0; }
-    a { color: var(--purple-dark); font-weight: 600; }
-    .notice {
-      border-left: 4px solid var(--purple);
-      background: #faf7ff;
-      padding: 15px 17px;
-      border-radius: 10px;
-      margin: 16px 0;
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 10px 20px 45px;
-      font-size: 14px;
-    }
-    @media (max-width: 600px) {
-      .hero { padding: 46px 18px 42px; }
-      main { padding: 24px 14px 50px; }
-      .card { padding: 21px; border-radius: 16px; }
-      h2 { font-size: 22px; }
-    }
-  </style>
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 48px 0 24px; }
+  .app { color: var(--accent); font-weight: 700; font-size: 15px; letter-spacing: .02em; text-transform: uppercase; margin: 0; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 6px 0 8px; letter-spacing: -.02em; }
+  .meta { color: var(--muted); margin: 0; font-size: 15px; }
+  .glance { background: var(--glance); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+             border-radius: 12px; padding: 18px 22px; margin: 8px 0 28px; }
+  .glance h2 { font-size: 17px; margin: 0 0 6px; }
+  .glance ul { margin: 0; }
+  nav { margin: 0 0 28px; }
+  nav ol { columns: 2; column-gap: 32px; margin: 0; padding-left: 22px; color: var(--muted); font-size: 15px; }
+  @media (max-width: 560px) { nav ol { columns: 1; } }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; }
+  h2 { font-size: 20px; margin: 0 0 8px; letter-spacing: -.01em; }
+  h3 { font-size: 16px; margin: 16px 0 4px; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  .contact-btn { display: inline-block; margin-top: 6px; padding: 10px 18px; border-radius: 999px; background: var(--accent);
+                  color: #fff; font-weight: 600; text-decoration: none; }
+  @media (prefers-color-scheme: dark) { .contact-btn { color: #0f1115; } }
+  footer { color: var(--muted); font-size: 14px; padding: 20px 0 48px; text-align: center; }
+  footer a { color: inherit; }
+</style>
 </head>
 <body>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brand">BillOne</div>
+<div class="wrap">
+  <header>
+    <p class="app">BillOne</p>
     <h1>Privacy Policy</h1>
-    <p>How BillOne handles information when you use our business management app.</p>
+    <p class="meta">Effective 29 September 2026 &middot; Sagar Singh (developer &ldquo;Myx&rdquo;)</p>
+  </header>
+
+  <div class="glance">
+    <h2>At a glance</h2>
+    <ul><li>Your business data is stored on your phone. It only leaves the device if you turn on Cloud Sync.</li><li>No account is needed. Cloud Sync is optional and runs only when you tap Sync.</li><li>The free version shows Google AdMob ads. BillOne Pro removes them.</li><li>I do not sell your data or read your invoices or customer lists.</li></ul>
   </div>
-</header>
 
-<main>
-  <div class="updated"><strong>Effective date:</strong> August 24, 2026</div>
+  <nav aria-label="Contents"><ol><li><a href="#who-is-responsible">Who is responsible</a></li><li><a href="#information-stored-on-your-device">Information stored on your device</a></li><li><a href="#cloud-sync-optional">Cloud Sync (optional)</a></li><li><a href="#purchases-billone-pro">Purchases (BillOne Pro)</a></li><li><a href="#advertising-free-version-only">Advertising (free version only)</a></li><li><a href="#what-i-do-not-collect">What I do not collect</a></li><li><a href="#sharing-invoices">Sharing invoices</a></li><li><a href="#service-providers">Service providers</a></li><li><a href="#how-long-data-is-kept">How long data is kept</a></li><li><a href="#deleting-your-data">Deleting your data</a></li><li><a href="#your-rights-and-choices">Your rights and choices</a></li><li><a href="#security">Security</a></li><li><a href="#children">Children</a></li><li><a href="#where-your-data-is-processed">Where your data is processed</a></li><li><a href="#changes-to-this-policy">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></nav>
 
-  <section class="card">
-    <h2>1. Introduction</h2>
-    <p>
-      Welcome to BillOne ("BillOne", "we", "us", or "our"). BillOne is a business
-      management application that helps businesses manage sales, purchases,
-      invoices, inventory, products and services, customers, suppliers, expenses,
-      payments and business reports.
-    </p>
-    <p>
-      This Privacy Policy explains what information may be collected, how it is
-      used, how it may be stored or shared, and the choices available to you when
-      you use BillOne.
-    </p>
-    <p>
-      By using BillOne, you acknowledge that you have read and understood this
-      Privacy Policy.
-    </p>
-  </section>
+  <main>
+    <section id="who-is-responsible">
+      <h2>1. Who is responsible</h2>
+      <p>BillOne is an offline-first GST invoicing, billing and inventory app for small businesses. It is developed and published by <strong>Sagar Singh</strong>, an individual developer based in India, under the developer name <strong>&ldquo;Myx&rdquo;</strong>. BillOne is not published by a company.</p><p>In this policy, &ldquo;I&rdquo;, &ldquo;me&rdquo; and &ldquo;my&rdquo; mean Sagar Singh. I decide how the information described here is used and I am responsible for it. Under India&rsquo;s Digital Personal Data Protection Act, 2023 I am the &ldquo;data fiduciary&rdquo;, and under the GDPR I am the &ldquo;data controller&rdquo;. I am also the grievance contact for BillOne.</p>
+    </section>
+    <section id="information-stored-on-your-device">
+      <h2>2. Information stored on your device</h2>
+      <p>Everything you enter is saved in a local database on your phone:</p><ul><li>your business profile, including business name, address, GSTIN, PAN and bank details;</li><li>customers and suppliers you add, such as names, phone numbers, email addresses, addresses and GSTINs;</li><li>products, services, stock and stock movements;</li><li>invoices, payments, recurring subscriptions and reports.</li></ul><p>This data does not leave your device unless you use Cloud Sync, export it or share it. Files you import (for example Excel or CSV product lists) are read only on the device.</p>
+    </section>
+    <section id="cloud-sync-optional">
+      <h2>3. Cloud Sync (optional)</h2>
+      <p>If you create an account and use Cloud Sync, the records listed above are copied to a cloud database hosted by Supabase so you can back them up and use them on another device.</p><ul><li>Your account is an email address and password. Passwords are handled by Supabase Auth and are never visible to me.</li><li>Every synced record is tied to your account and protected by row-level security, so only you can read or change it.</li><li>Sync runs only when you tap <em>Sync</em>. Nothing is uploaded in the background.</li><li>You can sign out at any time, and your local data stays on the device.</li></ul>
+    </section>
+    <section id="purchases-billone-pro">
+      <h2>4. Purchases (BillOne Pro)</h2>
+      <p>Subscriptions and the one-time Pro purchase are sold through Google Play or the Apple App Store and managed by RevenueCat. RevenueCat receives an app user ID (anonymous, or your account ID once you sign in) and the store&rsquo;s purchase receipt so Pro can be restored on your other devices. I never receive your card or bank details.</p>
+    </section>
+    <section id="advertising-free-version-only">
+      <h2>5. Advertising (free version only)</h2>
+      <p>The free version shows ads from Google AdMob. AdMob may use your device&rsquo;s advertising ID, IP address and information about your device and app use to show and measure ads. Where the law requires it, BillOne asks for your consent first through Google&rsquo;s consent form, and on iOS through Apple&rsquo;s tracking prompt. Ads may be personalised or not, depending on your choice. BillOne Pro removes all ads, and the ad SDK makes no ad requests for Pro users.</p>
+    </section>
+    <section id="what-i-do-not-collect">
+      <h2>6. What I do not collect</h2>
+      <ul><li>Contacts, location, photos or messages.</li><li>Analytics or tracking beyond what AdMob does in the free version.</li></ul><p>I do not sell, rent or trade your data, and I do not use your invoices or customer lists for marketing.</p>
+    </section>
+    <section id="sharing-invoices">
+      <h2>7. Sharing invoices</h2>
+      <p>When you export or share an invoice or report (PDF, Excel or CSV), it goes to the app or person you choose through your device&rsquo;s share sheet. You are responsible for having permission to store and share your customers&rsquo; and suppliers&rsquo; details.</p>
+    </section>
+    <section id="service-providers">
+      <h2>8. Service providers</h2>
+      <ul><li><strong><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></strong>: database and authentication, only if you use Cloud Sync.</li><li><strong><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a></strong>: purchase management, only if you buy or restore Pro.</li><li><strong><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></strong>: advertising, free version only.</li><li><strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></strong>: Google Play: app distribution and payments.</li><li><strong><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a></strong>: App Store: app distribution and payments.</li></ul><p>I may also disclose information if the law requires it, for example because of a valid court order.</p>
+    </section>
+    <section id="how-long-data-is-kept">
+      <h2>9. How long data is kept</h2>
+      <ul><li>Local data stays on your device until you delete it or uninstall the app.</li><li>Cloud data stays until you delete your account.</li><li>Purchase records are kept by the app stores and RevenueCat as their policies and tax laws require.</li></ul>
+    </section>
+    <section id="deleting-your-data">
+      <h2>10. Deleting your data</h2>
+      <ul><li><strong>Cloud data:</strong> delete your account in <em>Cloud Sync &rarr; Delete account</em>. Your account and every synced record are permanently removed.</li><li><strong>Local data:</strong> uninstall the app or clear its storage in your device settings.</li><li><strong>Without the app:</strong> <a href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">contact me</a> from the email address on your account and I will delete it.</li></ul>
+    </section>
+    <section id="your-rights-and-choices">
+      <h2>11. Your rights and choices</h2>
+      <p>You can view, edit, export (PDF, Excel, CSV) and delete your records inside the app.</p><p>Depending on where you live, you may also have the right to:</p><ul><li>access the personal data I hold about you and get a copy in a portable format;</li><li>correct information that is wrong or incomplete;</li><li>have your data erased;</li><li>restrict or object to certain processing;</li><li>withdraw consent where processing is based on consent;</li><li>nominate someone to exercise your rights if you die or become unable to (India).</li></ul><p>To make a request, <a href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">contact me</a>. I will reply within 30 days and may need to confirm that the data is yours first. If you are not satisfied with my answer, you can complain to the Data Protection Board of India or, in the EEA or UK, to your local data protection authority.</p>
+    </section>
+    <section id="security">
+      <h2>12. Security</h2>
+      <p>Cloud data is encrypted in transit (TLS) and at rest by the hosting provider, and access is restricted to the signed-in account. Data on your phone is protected by your device&rsquo;s own security, such as its screen lock and encryption. No system is completely secure, but if a breach affects your data I will notify you and the relevant authorities where the law requires.</p>
+    </section>
+    <section id="children">
+      <h2>13. Children</h2>
+      <p>BillOne is not intended for anyone under 18 because it is a business tool. I do not knowingly collect personal information from anyone under 18. If you believe a child has provided information through BillOne, <a href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">contact me</a> and I will delete it.</p>
+    </section>
+    <section id="where-your-data-is-processed">
+      <h2>14. Where your data is processed</h2>
+      <p>I am based in India. The service providers named above may store or process data in other countries, including the United States and the European Union. Where data leaves the EEA or UK, the transfer relies on safeguards such as the European Commission&rsquo;s Standard Contractual Clauses in the provider&rsquo;s terms.</p>
+    </section>
+    <section id="changes-to-this-policy">
+      <h2>15. Changes to this policy</h2>
+      <p>If I change this policy, I will update the date at the top of this page. For significant changes I will also let you know in BillOne before they take effect.</p>
+    </section>
+    <section id="contact">
+      <h2>16. Contact</h2>
+      <p>For questions about this policy, data requests or complaints, <a href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">contact me by email</a>. I built the app, so I will answer your message myself.</p><p>Sagar Singh (developer &ldquo;Myx&rdquo;), India</p>
+    </section>
+    <section>
+      <a class="contact-btn" href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">Contact us</a>
+    </section>
+  </main>
 
-  <section class="card">
-    <h2>2. Information We May Collect</h2>
-
-    <h3>2.1 Business and account information</h3>
-    <p>Depending on the features you use, BillOne may collect information such as:</p>
-    <ul>
-      <li>Business or shop name</li>
-      <li>Business address and contact details</li>
-      <li>GSTIN and other tax-related business details</li>
-      <li>Business logo or other information you choose to add</li>
-      <li>Account information, such as your name, email address or phone number, if an account is created</li>
-    </ul>
-
-    <h3>2.2 Transaction information</h3>
-    <p>
-      Information you enter into BillOne may include sales, purchases, invoices,
-      invoice numbers, products, services, prices, quantities, discounts, taxes,
-      payment status, expenses and other business records.
-    </p>
-
-    <h3>2.3 Customer and supplier information</h3>
-    <p>
-      You may choose to enter information about your customers and suppliers,
-      such as names, phone numbers, email addresses, addresses, GSTINs and
-      transaction or outstanding-balance information.
-    </p>
-
-    <h3>2.4 Device and technical information</h3>
-    <p>
-      We may receive limited technical information necessary to operate, secure
-      and improve the app, such as app version, device type, operating system,
-      crash information and diagnostic information. The exact information
-      collected depends on the services and analytics or crash-reporting
-      technologies enabled in the app.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>3. How We Use Information</h2>
-    <p>Information may be used to:</p>
-    <ul>
-      <li>Provide and operate BillOne's features</li>
-      <li>Create and manage invoices and business records</li>
-      <li>Calculate and display sales, purchases, taxes, balances and reports</li>
-      <li>Manage products, services and inventory</li>
-      <li>Manage customers and suppliers</li>
-      <li>Maintain and improve app performance and reliability</li>
-      <li>Detect, prevent and address fraud, abuse, security issues and technical problems</li>
-      <li>Respond to support requests and communicate important service information</li>
-      <li>Comply with applicable legal and regulatory obligations</li>
-    </ul>
-    <div class="notice">
-      <strong>Your business data belongs to your business.</strong>
-      BillOne does not sell your business records, customer lists, invoices or
-      inventory information to third parties for their own marketing purposes.
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>4. Data Storage and Security</h2>
-    <p>
-      Depending on the BillOne version and features you use, your information may
-      be stored locally on your device, on BillOne's servers, or through trusted
-      service providers used to operate the app.
-    </p>
-    <p>
-      We use reasonable technical and organizational measures designed to protect
-      information against unauthorized access, alteration, disclosure or
-      destruction. However, no electronic storage or transmission system can be
-      guaranteed to be completely secure.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>5. Sharing of Information</h2>
-    <p>
-      We may share information only when reasonably necessary to provide,
-      maintain, secure or legally operate BillOne, including with:
-    </p>
-    <ul>
-      <li>Cloud hosting, database, storage and infrastructure providers</li>
-      <li>Analytics, crash-reporting or technical service providers, where enabled</li>
-      <li>Customer support and communication service providers</li>
-      <li>Professional advisers or authorities when required by law</li>
-    </ul>
-    <p>
-      Service providers are expected to process information only for the purposes
-      for which they are engaged and subject to appropriate contractual or legal
-      protections.
-    </p>
-    <p>
-      We may also disclose information if required to comply with applicable law,
-      a valid legal process, or to protect the rights, safety and security of
-      BillOne, our users or others.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>6. Sharing Invoices and Business Records</h2>
-    <p>
-      BillOne may allow you to export, download, print or share invoices and
-      other business information. When you choose to share information using
-      your device's sharing features, the information is sent to the person,
-      service or application you select.
-    </p>
-    <p>
-      You are responsible for ensuring that you have an appropriate legal basis
-      and permission to enter and share personal information belonging to your
-      customers, employees, suppliers or other third parties.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>7. Data Retention</h2>
-    <p>
-      We retain information for as long as reasonably necessary to provide the
-      service, maintain business records, resolve disputes, comply with legal
-      obligations and enforce agreements.
-    </p>
-    <p>
-      If you delete your account or request deletion, we will take reasonable
-      steps to delete or anonymize information that we are not required to retain.
-      Some information may remain for a limited period where required by law,
-      for legitimate security purposes, or as part of backups.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>8. Your Choices and Rights</h2>
-    <p>
-      Depending on your location and applicable law, you may have rights to:
-    </p>
-    <ul>
-      <li>Request access to personal information we hold about you</li>
-      <li>Request correction of inaccurate information</li>
-      <li>Request deletion of information, subject to legal exceptions</li>
-      <li>Request restriction of certain processing</li>
-      <li>Object to certain processing</li>
-      <li>Request a copy of certain information in a portable format</li>
-      <li>Withdraw consent where processing is based on consent</li>
-    </ul>
-    <p>
-      To exercise an applicable right, contact us using the details in the
-      "Contact Us" section below.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>9. Children's Privacy</h2>
-    <p>
-      BillOne is intended for businesses and is not directed to children.
-      We do not knowingly collect personal information from children in
-      circumstances where such collection is prohibited by applicable law.
-      If you believe a child has provided personal information to us, please
-      contact us so that we can take appropriate action.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>10. Third-Party Services and Links</h2>
-    <p>
-      BillOne may use third-party services to support hosting, authentication,
-      analytics, crash reporting, notifications or other functionality. Those
-      providers may process information according to their own privacy policies
-      and applicable agreements.
-    </p>
-    <p>
-      If BillOne links to an external website or service, that service is not
-      controlled by this Privacy Policy. We recommend reviewing the privacy
-      policy of any third-party service before providing information to it.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>11. International Data Transfers</h2>
-    <p>
-      Depending on the infrastructure and service providers used by BillOne,
-      information may be processed or stored in countries other than the country
-      where you live. Where required by applicable law, we will use appropriate
-      safeguards for such transfers.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>12. Changes to This Privacy Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time to reflect changes in
-      BillOne, applicable law or our data practices. When we make changes, we
-      will update the effective date at the top of this page. Material changes
-      may also be communicated through the app or another appropriate method.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>13. Contact Us</h2>
-    <p>
-      If you have questions, concerns or requests regarding this Privacy Policy
-      or your personal information, please contact:
-    </p>
-    <p>
-      <strong>BillOne</strong><br>
-      Email: <a href="mailto:privacy@billone.app">privacy@billone.app</a>
-    </p>
-    <p>
-      Please replace the email address above with your actual privacy/support
-      email address before publishing this page.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>14. Important Note</h2>
-    <p>
-      This Privacy Policy is a general template based on the functionality
-      described for BillOne. Before publishing it as the official policy for
-      your app, make sure it accurately reflects your actual data flows,
-      permissions, analytics/SDKs, authentication, cloud storage, advertising,
-      payment providers and deletion procedures.
-    </p>
-  </section>
-</main>
-
-<footer>
-  © 2026 BillOne. All rights reserved.
-</footer>
-
+  <footer>
+    &copy; 2026 Sagar Singh &middot; Published as &ldquo;Myx&rdquo; &middot; <a href="mailto:sagarrawatuk@gmail.com?subject=BillOne%20privacy">Contact us</a>
+  </footer>
+</div>
 </body>
 </html>
